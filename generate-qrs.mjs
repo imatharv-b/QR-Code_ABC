@@ -3,13 +3,13 @@ import fs from 'fs';
 import path from 'path';
 
 // Change this to your final Vercel or BioAmrut domain once deployed
-const BASE_URL = 'https://bioamrut.com'; 
+const BASE_URL = 'https://bioamrut.com';
 
 // Put your batch numbers here! Add as many as you need.
 const batchNumbers = [
-  'P2225HC012', 
-  'P2225CP045',
-  'P2225BF078'
+  'KesarShakti',
+  'BlackGold',
+  'KalaMoti'
 ];
 
 const outputDir = path.join(process.cwd(), 'qrcodes');
@@ -25,7 +25,7 @@ async function generateQRCodes() {
   for (const batch of batchNumbers) {
     const url = `${BASE_URL}/${batch}`;
     const outputPath = path.join(outputDir, `${batch}.png`);
-    
+
     try {
       // Generate QR Code with high error correction (good for printing)
       await QRCode.toFile(outputPath, url, {
@@ -42,7 +42,7 @@ async function generateQRCodes() {
       console.error(`❌ Failed to create QR for ${batch}:`, err);
     }
   }
-  
+
   console.log(`\n🎉 All done! You can find your QR codes in the "qrcodes" folder.`);
 }
 

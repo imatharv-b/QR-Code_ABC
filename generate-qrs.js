@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Change this to your final Vercel or BioAmrut domain once deployed
-const BASE_URL = 'https://bioamrut.com/p'; 
+const BASE_URL = 'https://bioamrut.com'; 
 
 // Put your batch numbers here! Add as many as you need.
 const batchNumbers = [

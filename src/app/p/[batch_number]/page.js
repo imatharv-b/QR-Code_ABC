@@ -17,8 +17,8 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `${product.product_name} - BioAmrut Verified`,
-    description: `Verified product information for ${product.product_name}. Batch: ${batch_number}`,
+    title: `${product.product_name} - Amrut Biochem`,
+    description: `Product information for ${product.product_name}. Batch: ${batch_number}`,
   };
 }
 
@@ -134,23 +134,9 @@ export default async function ProductPage({ params }) {
                 <h1 className="text-lg font-bold text-gray-800">Amrut <span className="text-[#2D6A4F]">Biochem</span></h1>
               </div>
             </div>
-            {/* Verified Badge */}
-            <div className="pulse-badge flex items-center gap-1 bg-green-50 border border-green-200 rounded-full px-2.5 py-1">
-              <svg className="w-3.5 h-3.5 text-[#2D6A4F]" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span className="text-[11px] font-semibold text-[#2D6A4F]">Verified</span>
-            </div>
           </div>
 
-          {/* Verification Banner */}
-          <div className="mt-3 bg-[#eef7f2] border border-green-200 rounded-lg px-3 py-2.5 flex items-start gap-2">
-            <span className="text-base mt-px">✅</span>
-            <div>
-              <p className="font-semibold text-[#1B4332] text-xs">QR Verified Product</p>
-              <p className="text-[11px] text-gray-500 mt-0.5">This product information has been verified by Amrut Biochem.</p>
-            </div>
-          </div>
+
         </div>
       </header>
 

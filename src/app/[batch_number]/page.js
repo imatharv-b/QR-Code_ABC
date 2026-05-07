@@ -1,5 +1,9 @@
 import { supabase } from "@/lib/supabase";
 
+// Force dynamic rendering - never cache this page
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function generateMetadata({ params }) {
   const { batch_number } = await params;
 
